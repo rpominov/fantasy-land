@@ -13,7 +13,7 @@ This project specifies interoperability of common algebraic structures. The main
 
 ### How to add compatibility with Fantasy Land to your library
 
-If your library defines a new type make sure that the values of that type have a reference to the canonical [module](specification.md#module) in the `fantasy-land/canonical` property [as described in the specification](specification.md#canonical-module).
+If your library defines a new type make sure that the values of that type have a reference to the canonical [module](specification.md#module) in the `canonical` property [as described in the specification](specification.md#canonical-module).
 
 In rare cases when it's impossible to add the property to values, for example when you define a module for a type that you cannot control, it's still useful to expose compatible [module objects](specification.md#module). Simply say in your documentation where the modules are located.
 

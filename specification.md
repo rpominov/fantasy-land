@@ -92,15 +92,15 @@ All methods' implementations should only use type information about arguments th
 
 ## Canonical Module
 
-A value may have a reference to a canonical module that works with values of that value's type. The reference should be in the `fantasy-land/canonical` property. For example:
+A value may have a reference to a canonical module that works with values of that value's type. The reference should be in the `canonical` property. For example:
 
 ```js
 const ListModule = {
   of(x) {
-    return {'fantasy-land/canonical': ListModule, data: [x]}
+    return {'canonical': ListModule, data: [x]}
   },
   map(f, v) {
-    return {'fantasy-land/canonical': ListModule, data: v.data.map(f)}
+    return {'canonical': ListModule, data: v.data.map(f)}
   }
 }
 ```
@@ -117,7 +117,7 @@ const ListModule2 = {
   }
 }
 
-const list = {'fantasy-land/canonical': ListModule2, data: [1]}
+const list = {'canonical': ListModule2, data: [1]}
 ```
 
 Note that the `ListModule2` here is correct. Only the `list` value doesn't follow the specification.
